@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 import smtplib
 from email.message import EmailMessage
+from validate_email import validate_email
 
 
 def send_email_view(request):
@@ -15,7 +16,11 @@ def send_email_view(request):
     # # recipient_list = ['recipient@example.com']
     #
     # send_mail(subject, message, 'n.basha@g-japan.com', ['nisarbasha1993@gmail.com'], fail_silently=False,)
-
+    is_valid = validate_email(email_address, verify=True)
+    if not is_valid:
+        print("not valid")
+    else:
+        print("valid")
 
     # SMTP server configuration
     smtp_server = 'smtp.gmail.com'
