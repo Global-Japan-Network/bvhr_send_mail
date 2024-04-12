@@ -1,0 +1,16 @@
+Django==3.2.10
+djangorestframework==3.14.0
+requests==2.26.0
+validate_email==1.3
+
+
+
+
+
+
+
+
+
+
+
+
