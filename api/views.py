@@ -16,17 +16,19 @@ def send_email_view(request):
     # # recipient_list = ['recipient@example.com']
     #
     # send_mail(subject, message, 'n.basha@g-japan.com', ['nisarbasha1993@gmail.com'], fail_silently=False,)
-    is_valid = validate_email(email_address, verify=True)
-    if not is_valid:
-        print("not valid")
-    else:
-        print("valid")
+
 
     # SMTP server configuration
     smtp_server = 'smtp.gmail.com'
     smtp_port = 465  # SMTP SSL port
     smtp_username = 'n.basha@g-japan.com'
     smtp_password = 'nbasha2022'
+
+    is_valid = validate_email('n.basa@g-japan.com', verify=True)
+    if not is_valid:
+        print("not valid")
+    else:
+        print("valid")
 
     # Create an SSL connection to the SMTP server
     try:
