@@ -12,6 +12,6 @@ def send_email_view(request):
     message = 'This is a test email sent from Django.'
     # recipient_list = ['recipient@example.com']
 
-    send_mail(subject, message, 'n.basha@g-japan.com', ['nisarbasha1993@gmail.com'])
+    send_mail(subject, message, 'n.basha@g-japan.com', ['nisarbasha1993@gmail.com'], fail_silently=False,)
 
     return HttpResponse("Email sent successfully!")
